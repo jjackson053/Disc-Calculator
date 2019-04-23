@@ -1,124 +1,166 @@
 <!DOCTYPE html>
-<!--inline CSS: directly in the html element (don't do this)
-    internal CSS: using <style> tags within a single document
-    External CSS: Linking an external .css file. -->
+<!--block level: div, h1-h6, p, form 
+ - block elements start on a new line  
+ - block elements take full width available  -->
 
+<!-- Incline level: span, img, a 
+  - incline elements do not start on a new line 
+  - take only the necessary width-->
+
+<!--Semantic Tags:
+<header></header> - logo, social media links
+<footer></footer> -copyright and policy 
+<aside></aside> - side bar content
+<main></main>
+<article></article> - blog
+<nav></nav> - navagation bar
+<section></section> - copy text
+<details></details>
+-->
 
 <html>
 
 <head>
-    <title>CSS Cheat Sheet</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>HTML Cheat Sheet </title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="box-1">
-            <h1>Hello world </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit explicabo iure similique omnis unde ad
-                dolorum
-                quis error tenetur. Quisquam, laudantium sed eligendi harum aspernatur sequi adipisci iste
-                exercitationem
-                officia.</p>
+    <a href="blog.html">go to blog</a>
+    <!-- headings -->
+    <h1>heading one</h1>
+    <h2>heading two</h2>
+    <h3>heading three</h3>
+    <h4>heading four</h4>
+    <h5>heading five</h5>
+    <h6>heading six</h6>
+
+    <!--Paragraph-->
+    <p>
+        Lorem ipsum dolor sit amet <strong> adipisicing elit.</strong> Explicabo sequi ex illo, <a
+            href="http://google.com" target="_blank"> figure at ipsa sed?</a> Ipsam
+        laboriosam harum pariatur dolorem, aliquid fuga possimus natus nesciunt quasi voluptates, vitae doloribus!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit <em> consectetur adipisicing elit.</em> Explicabo sequi ex illo, officiis at ipsa sed?
+        Ipsam
+        laboriosam harum pariatur dolorem, aliquid fuga possimus natus nesciunt quasi voluptates, vitae doloribus!
+    </p>
+
+    <!--Lists-->
+    <ul>
+        <!--unordered list-->
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </ul>
+    <ol>
+        <!--ordered list-->
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </ol>
+    <!--Table-->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Jackosn</td>
+                <td>John@something.com</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>mike johnson</td>
+                <td>mike@something.com</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>bill turner</td>
+                <td>bill@something.com</td>
+                <td>56</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <!--Forms-->
+    <form action="process.php" method="POST">
+        <div>
+            <label> First Name </label>
+            <input type="text" name="firstName" placeholder="Enter first name">
         </div>
-
-        <div class="box-2">
-            <h1>Goodbye world </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit explicabo iure similique omnis unde ad
-                dolorum
-                quis error tenetur. Quisquam, laudantium sed eligendi harum aspernatur sequi adipisci iste
-                exercitationem
-                officia.</p>
-            <a class="button" href="">read more</a>
+        <br>
+        <div>
+            <label> Last Name </label>
+            <input type="text" name="lastName">
         </div>
-        <div class="categories">
-            <h2>categories</h2>
-            <ul>
-                <li><a href="#">category 1</a></li>
-                <li><a href="#">category 2</a></li>
-                <li><a href="#">category 3</a></li>
-                <li><a href="#">category 4</a></li>
-                <li><a href="test.html">category 5</a></li>
-            </ul>
-
+        <br>
+        <div>
+            <label> Email</label>
+            <input type="email" name="email">
         </div>
-
-        <form class="my-form">
-            <div class="form-group">
-                <label>name: </label>
-                <input type="text" name="name">
-            </div>
-            <div class="form-group">
-                <label>email: </label>
-                <input type="text" name="email">
-            </div>
-            <div class="form-group">
-                <label>message: </label>
-                <textarea type="text" name="message"></textarea>
-            </div>
-            <input class="button" type="submit" value="Submit" name="">
-
-
-        </form>
-
-        <div class="block">
-            <h3>Heading</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ducimus quae? Voluptatum blanditiis
-                exercitationem non distinctio? Dolore odit, reprehenderit voluptas id corporis sed provident nemo,
-                voluptate adipisci, minima vitae! Laboriosam.</p>
+        <br>
+        <div>
+            <label> Message</label>
+            <textarea name="message"></textarea>
+        </div>
+        <br>
+        <div>
+            <label>Gender</label>
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
 
         </div>
-        <div class="block">
-                <h3>Heading</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ducimus quae? Voluptatum blanditiis
-                    exercitationem non distinctio? Dolore odit, reprehenderit voluptas id corporis sed provident nemo,
-                    voluptate adipisci, minima vitae! Laboriosam.</p>
-    
-            </div>
-            <div class="block">
-                    <h3>Heading</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ducimus quae? Voluptatum blanditiis
-                        exercitationem non distinctio? Dolore odit, reprehenderit voluptas id corporis sed provident nemo,
-                        voluptate adipisci, minima vitae! Laboriosam.</p>
-        
-                </div>
-         <div class="clr"></div>
-         <div id="main-block">
-                <h3>Heading</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ducimus quae? Voluptatum blanditiis
-                    exercitationem non distinctio? Dolore odit, reprehenderit voluptas id corporis sed provident nemo,
-                    voluptate adipisci, minima vitae! Laboriosam.</p>
+        <br>
+        <div>
+            <label> Age</label>
+            <input type="number" name="age" value="30">
+        </div>
+        <br>
+        <div>
+            <label>Birthday:</label>
+            <input type="date" name="birthday">
+        </div>
+        <br>
+        <input type="submit" name="submit" value="submit">
 
-         </div>
-         <div id="sidebar">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ducimus quae? Voluptatum blanditiis
-                    exercitationem non distinctio? Dolore odit, reprehenderit voluptas id corporis sed provident nemo,
-                    voluptate adipisci, minima vitae! Laboriosam.</p>
+    </form>
+    <br>
+    <!--Button-->
+    <button>Click Me</button>
+    <br>
+    <!--Image-->
+    <a href="images/sample.jpeg">
+        <img src="images/sample.jpeg" alt="My sample Image" width="200">
+    </a>
 
-         </div>
-         <div class="clr"></div>
-          
-         <div class="p-box">
-             <h1>Hello</h1>
-             <h2>Goodbye</h2>
-         </div>
-         <ul class="my-list">
-             <li>list item</li>
-             <li>list item</li>
-             <li>list item</li>
-             <li>list item</li>
-             <li>list item</li>
-             <li>list item</li>
-             <li>list item</li>
-             <li>list item</li>
-             <li>list item</li>
-             <li>list item</li>
+    <!--Quotation-->
+    <blockquote cite="http://traversymedia.com">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, mollitia, cupiditate amet aliquid quos odio
+        dolores voluptate vitae, dolore voluptatibus eum porro. Suscipit molestias, sapiente magni non necessitatibus
+        maxime cupiditate?
+    </blockquote>
 
-         </ul>
-    </div>
-    <a class="fix-me button" href="">Hello</a>
-    <div style="margin-top: 500px;"></div>
+    <p>The <abbr title="World wide Web">WWW</abbr> 
+        is awesome</p>
+
+     <p><cite>HTML crash course</cite> by Brad Traversy</p>   
+
+    <div style="margin-top:500px"></div>
 </body>
 
 </html>
